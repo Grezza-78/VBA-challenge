@@ -30,7 +30,7 @@ Each different Sub has been described within the VBA scripting file:
     
     * Yearly_Percent_Change - calculates the yearly and percentage change for each ticker and prints it
     
-    * YearlyChangeCheck - calculates and prints the positive or negative change for each ticker, and then applies conditional formatting accordingly with postivie change being green and negative change being red
+    * YearlyChangeCheck - calculates and prints the positive or negative price change for each ticker, and then applies conditional formatting accordingly with postivie change being green and negative change being red
     
     * Total_Stock_Vol - calculates the total years stock volume for each ticker and prints it
     
