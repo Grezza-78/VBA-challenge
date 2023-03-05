@@ -61,7 +61,8 @@ End Sub
 
 Public Sub YearlyChangeCheck()
 
-'This Sub is to calulate the yearly change percentage and apply cell formatting
+'This Sub is to calulate the yearly change in Ticker and apply cell formatting
+'with green for postive, red for negative and cyan for nil
 
 Dim DataCount, RowNum As Double
 
@@ -69,12 +70,12 @@ DataCount = Cells(Rows.Count, 11).End(xlUp).Row         'Counting all the data i
 
 For RowNum = 1 To DataCount - 1
 
-    If Range("K" & RowNum + 1) > 0 Then
-        Range("K" & RowNum + 1).Interior.Color = vbGreen
-    ElseIf Range("K" & RowNum + 1) = 0 Then
-        Range("K" & RowNum + 1).Interior.Color = vbCyan
+    If Range("J" & RowNum + 1) > 0 Then
+        Range("J" & RowNum + 1).Interior.Color = vbGreen
+    ElseIf Range("J" & RowNum + 1) = 0 Then
+        Range("J" & RowNum + 1).Interior.Color = vbCyan
     Else
-        Range("K" & RowNum + 1).Interior.Color = vbRed
+        Range("J" & RowNum + 1).Interior.Color = vbRed
         
     End If
 
@@ -150,7 +151,7 @@ End Sub
 
 Public Sub Total_Stock_Vol()
 
-'This sub calculates the total Stock volume traded for the year for each Ticker
+'This sub calculates the total Stock volume traded for the year for each Ticker through a loop
 
 Dim TickerRepCount, TickRepRowNum, DataCount, DataRowNum, StockVol As Double
 
