@@ -1,7 +1,7 @@
 Attribute VB_Name = "Module11"
 
 Public Sub SRonallWorksheets()
-'This Sub commences the StockReport on all WorkSheets - It starts here... :)
+                'This Sub commences the StockReport on all WorkSheets - It starts here... :)
 
 Dim WS_Count As Integer
 Dim I As Integer
@@ -20,7 +20,7 @@ End Sub
 
 Public Sub StockReport()
 
-'This is the main sub for running the Stock Report on the Worksheet
+                'This is the main sub for running the Stock Report on the Worksheet
 
 Call ReportsTable
 Call TickerIdentifier
@@ -61,8 +61,8 @@ End Sub
 
 Public Sub YearlyChangeCheck()
 
-'This Sub is to calulate the yearly change in Ticker and apply cell formatting
-'with green for postive, red for negative and cyan for nil
+            'This Sub is to calulate the yearly price change for each Ticker and then applyies cell formatting
+            'with green for postive, red for negative and cyan for nil
 
 Dim DataCount, RowNum As Double
 
@@ -85,8 +85,8 @@ End Sub
 
 Public Sub TickerIdentifier()
 
-'This sub identifies the Tickers by looping and checking each row against the
-'previous line and when they dont match it prints the ticker in the Ticker column
+            'This sub identifies the Tickers by looping and checking each row against the
+            'previous line and when they dont match it prints the ticker in the Ticker column
 
 Dim DataCount, RowNum, TickerCount As Double
 
@@ -107,14 +107,14 @@ End Sub
 
 Public Sub Yearly_Percent_Change()
 
-'This sub calculates the difference between the open value at 2/1/xxx
-'and closing value at 31/12/xx
-'i.e. Closing Value at 2/1/2020 less Opening value at 31/12/2020 = Yearly Change
+            'This sub calculates the difference between the open value at 2/1/xxx
+            'and closing value at 31/12/xx
+            'i.e. Closing Value at 2/1/2020 less Opening value at 31/12/2020 = Yearly Change
 
-'This sub will also calcualte the percentage between the open
-'and closing values
-'i.e The percentage difference = difference caluclated above divided
-'into the Opening Value
+            'This sub will also calcualte the percentage between the open
+            'and closing values
+            'i.e The percentage difference = difference caluclated above divided
+            'into the Opening Value
 
 Dim TickerRepCount, TickRepRowNum, DataCount, DataRowNum, OpenV, CloseV, Difference As Double
 Dim FirstDate, LastDate As String
@@ -151,7 +151,7 @@ End Sub
 
 Public Sub Total_Stock_Vol()
 
-'This sub calculates the total Stock volume traded for the year for each Ticker through a loop
+                'This sub calculates the total Stock volume traded for the year for each Ticker through a loop
 
 Dim TickerRepCount, TickRepRowNum, DataCount, DataRowNum, StockVol As Double
 
@@ -181,8 +181,8 @@ End Sub
 
 Public Sub GreatestIncrease()
 
-'This Sub checks the Percent Change column and identifies the Ticker with biggest
-'percentage increase over the year
+                'This Sub analyses the Percent Change column and identifies the Ticker with biggest
+                'percentage increase over the year
 
 Dim DataCount, DataRowNum, IncreaseV As Double
 Dim Ticker As String
@@ -210,8 +210,8 @@ End Sub
 
 Public Sub GreatestDecrease()
 
-'This Sub checks the Percent Change column and identifies the Ticker with biggest
-'percentage decrease over the year
+                'This Sub anaylses the Percent Change column and identifies the Ticker with biggest
+                'percentage decrease over the year
 
 Dim DataCount, DataRowNum, DecreaseV As Double
 Dim Ticker As String
@@ -239,8 +239,8 @@ End Sub
 
 Public Sub GreatestVolume()
 
-'This Sub checks the Volume column and identifies the Ticker with biggest
-'total volume stock volume over the year
+                'This Sub analyses the Volume column and identifies the Ticker with biggest
+                'total volume stock volume over the year
 
 Dim DataCount, DataRowNum, StockV As Double
 Dim Ticker As String
